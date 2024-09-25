@@ -1,0 +1,19 @@
+Currently, I am working on drupal.
+I want to add a functionality in the website so that I can debug the twig templates in the website.
+First, make sure you're working in development mode by switching the site to use the development services file.
+To do this,
+I modified the sites/defsult/settings.php file for this.
+Added this line
+Can replace the original one too  
+//centroxy
+$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
+When DRUPAL_ROOT gave me error,
+Added this line at the top of the settings.php file.
+//centroxy
+if (!defined('DRUPAL_ROOT')) {
+  define('DRUPAL_ROOT', dirname(__DIR__, 2));
+}
+Now,to enable twig debugging..
+Open sites/default/development.services.yml and add or modify the following lines under the twig.config section:
+3rd step -> Go to Configuration -> Development -> Performance and click Clear all caches.
+This did not work met with an error.
