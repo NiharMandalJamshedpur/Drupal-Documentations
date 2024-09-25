@@ -16,3 +16,4 @@ if (!defined('DRUPAL_ROOT')) {
 Now,to enable twig debugging..
 Open sites/default/development.services.yml and add or modify the following lines under the twig.config section:
 3rd step -> Go to Configuration -> Development -> Performance and click Clear all caches.
+This did not work met with an error.
